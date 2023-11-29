@@ -1,47 +1,43 @@
-# Kaggle_Comptetiton
-Train an AI system to effectively detect AI generated essays from human written essays to help educational institutions combat cheating during submissions
-
-
 AI-Generated Text Detection System
 Overview
-This project implements a machine learning system designed to differentiate between human-written and AI-generated essays. Utilizing advanced models such as LLAMA and BERT, the system trains on a diverse dataset, leveraging techniques like Parameter-Efficient Fine-Tuning (PEFT) for efficient adaptation to the task. The primary goal is to accurately classify essays into two categories: AI-generated and human-written, addressing the growing need for discerning AI influence in text content.
+The AI-Generated Text Detection System is a machine learning solution aimed at distinguishing AI-generated essays from those written by humans. It leverages advanced models like LLAMA and BERT, trained on diverse datasets. The primary objective is to help educational institutions combat cheating by accurately classifying essays. The system is built to address the increasing challenge of identifying AI's role in text generation.
 
 Features
-Advanced Language Models: Utilizes LLAMA and BERT models for robust text understanding.
-Parameter-Efficient Fine-Tuning: Adapts large language models efficiently to the specific task without extensive retraining.
-Stratified K-Fold Cross-Validation: Ensures reliable evaluation and generalization of the model.
-Parallel Text Preprocessing: Speeds up the preprocessing stage by handling multiple texts concurrently.
-Automated Typo Correction: Improves text quality using language_tool_python.
-GPU Optimization: Configures models for efficient GPU usage, including 8-bit quantization.
-Debug Mode: Facilitates quick testing and debugging of the system.
-Comprehensive Logging: Tracks and reports the system's performance and issues.
-Scalability: Structured to handle large datasets and extensive models.
+Advanced Language Models: Uses LLAMA and BERT for deep text analysis.
+Parameter-Efficient Fine-Tuning (PEFT): Adapts large models efficiently to specific tasks.
+Stratified K-Fold Cross-Validation: Guarantees reliable model evaluation and generalization.
+Parallel Text Preprocessing: Enhances preprocessing efficiency by handling multiple texts simultaneously.
+Automated Typo Correction: Utilizes language_tool_python to enhance text quality.
+GPU Optimization: Optimizes for GPU usage, including 8-bit quantization, for performance.
+Debug Mode: Simplifies system testing and debugging.
+Comprehensive Logging: Monitors and logs system performance and issues.
+Scalability: Designed to manage large datasets and extensive models efficiently.
 
-****System Requirements****
-**Python 3.8 or later
-Pandas, NumPy, PyTorch, Transformers, PEFT, and other dependencies (see requirements.txt for a complete list)
-GPU environment (preferably with CUDA support) for efficient model training and inference**
+System Requirements
 
-****Installation****
-**Clone the repository to your local machine or cloud environment.**
+**Python 3.8+
+Libraries: Pandas, NumPy, PyTorch, Transformers, PEFT, etc. (Refer to requirements.txt)
+GPU environment (CUDA support recommended) for model training and inference**
 
-****Install required dependencies:****
+Installation
+Clone the repository:
+
+**git clone (https://github.com/shaunck96/AI_Generated_Essay_Detector_Using_FineTunedLLM.git)**
+
+Install dependencies:
+
 **pip install -r requirements.txt**
 
-**Ensure access to appropriate hardware GPUs for training and inference.**
+Usage
+Data Preparation
+Prepare a CSV dataset with essays labeled as 'AI-generated' (label = 1) or 'human-written' (label = 0).
+Columns should include text for the essay content.
+Training the Model
+Run the training script:
 
-****Usage****
-****Data Preparation****
-**Load your dataset of essays, which should be labeled as 'AI-generated' or 'human-written'. The dataset should be in CSV format and contain at least two columns: text (the essay) and label (0 for human-written, 1 for AI-generated).**
-
-****Training the Model****
-Run the training script with the following command:
 **python train_model.py**
-This script will perform the following steps:
-**Preprocess the text data, including typo correction.**
-**Load and configure the LLAMA/BERT models.
-Train the models using Stratified K-Fold Cross-Validation.
-Save the trained models for later inference.**
 
-License
-This project is open source and available under the MIT License.
+The script will preprocess data, load models, conduct Stratified K-Fold Cross-Validation, and save the trained models.
+
+Contributing
+Contributions are welcome. Please follow standard coding practices and test new features or fixes thoroughly.
