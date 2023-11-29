@@ -1,9 +1,6 @@
 xlrd
-peft --no-index --find-links /kaggle/input/llm-detect-pip/peft-0.5.0-py3-none-any.whl
-language-tool-python --no-index --find-links /kaggle/input/daigt-misc/language_tool_python-2.7.1-py3-none-any.whl
-transformers#==4.30
+transformers
 peft
-https://test.pypi.org/simple/ bitsandbytes
 bitsandbytes
 accelerate
 datasets
