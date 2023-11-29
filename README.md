@@ -34,28 +34,13 @@ Load your dataset of essays, which should be labeled as 'AI-generated' or 'human
 Training the Model
 Run the training script with the following command:
 
-bash
-Copy code
-python train_model.py
+**python train_model.py**
 This script will perform the following steps:
 
 Preprocess the text data, including typo correction.
 Load and configure the LLAMA/BERT models.
 Train the models using Stratified K-Fold Cross-Validation.
 Save the trained models for later inference.
-Predicting with the Model
-To predict whether new essays are AI-generated or human-written, use the prediction script:
-
-bash
-Copy code
-python predict_model.py
-This script will:
-
-Load the trained models.
-Preprocess and tokenize the input essays.
-Provide predictions with the trained models.
-Contributing
-Contributions to this project are welcome! Please follow standard coding practices and ensure thorough testing of new features or bug fixes.
 
 License
 This project is open source and available under the MIT License.
