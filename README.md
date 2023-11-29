@@ -16,31 +16,32 @@ GPU Optimization: Configures models for efficient GPU usage, including 8-bit qua
 Debug Mode: Facilitates quick testing and debugging of the system.
 Comprehensive Logging: Tracks and reports the system's performance and issues.
 Scalability: Structured to handle large datasets and extensive models.
-System Requirements
-Python 3.8 or later
+
+****System Requirements****
+**Python 3.8 or later
 Pandas, NumPy, PyTorch, Transformers, PEFT, and other dependencies (see requirements.txt for a complete list)
-GPU environment (preferably with CUDA support) for efficient model training and inference
-Installation
-Clone the repository to your local machine or cloud environment.
-Install required dependencies:
-bash
-Copy code
-pip install -r requirements.txt
-Ensure access to appropriate hardware (GPUs) for training and inference.
-Usage
-Data Preparation
-Load your dataset of essays, which should be labeled as 'AI-generated' or 'human-written'. The dataset should be in CSV format and contain at least two columns: text (the essay) and label (0 for human-written, 1 for AI-generated).
+GPU environment (preferably with CUDA support) for efficient model training and inference**
 
-Training the Model
+****Installation****
+**Clone the repository to your local machine or cloud environment.**
+
+****Install required dependencies:****
+**pip install -r requirements.txt**
+
+**Ensure access to appropriate hardware GPUs for training and inference.**
+
+****Usage****
+****Data Preparation****
+**Load your dataset of essays, which should be labeled as 'AI-generated' or 'human-written'. The dataset should be in CSV format and contain at least two columns: text (the essay) and label (0 for human-written, 1 for AI-generated).**
+
+****Training the Model****
 Run the training script with the following command:
-
 **python train_model.py**
 This script will perform the following steps:
-
-Preprocess the text data, including typo correction.
-Load and configure the LLAMA/BERT models.
+**Preprocess the text data, including typo correction.**
+**Load and configure the LLAMA/BERT models.
 Train the models using Stratified K-Fold Cross-Validation.
-Save the trained models for later inference.
+Save the trained models for later inference.**
 
 License
 This project is open source and available under the MIT License.
