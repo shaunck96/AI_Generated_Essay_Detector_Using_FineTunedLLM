@@ -35,7 +35,7 @@ Columns should include text for the essay content.
 Training the Model
 Run the training script:
 
-**python train_model.py**
+**python Language_Model_fine_tuning.py**
 
 The script will preprocess data, load models, conduct Stratified K-Fold Cross-Validation, and save the trained models.
 
